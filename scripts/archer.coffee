@@ -39,12 +39,3 @@ module.exports = (robot) ->
       dialog += jQuery(quote).text().trim() + "\n"
       msg.send dialog
 
-  # Make it possible to turn off a few of the more NSFW ones
-  unless process.env.HUBOT_ARCHER_SFW
-
-    robot.hear /^benoit/i, (msg) ->
-      msg.send "balls"
-
-    robot.hear /love/i, (msg) ->
-      msg.reply "And I love that I have an erection... that doesn't involve homeless people."
-
